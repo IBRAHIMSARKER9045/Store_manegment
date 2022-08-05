@@ -1,5 +1,6 @@
 <?php
 require('connection.php');
+
 ?>
  <!DOCTYPE html>
  <html lang="en">
@@ -30,13 +31,31 @@ require('connection.php');
 
 
     ?>
+<?php
+    $sql = "SELECT * FROM category"; 
 
+    $query =  $conn->query($sql);
+    
+
+?>
     <form action="<?php echo $_SERVER['PHP_SELF'] ; ?>" method="GET">
       Product Name:<br>
       <input type="text" name="product_name"><br><br>
       Product Category:<br>
-      <input type="text" name="product_category"><br><br>
-      Product Code:<br>
+      <select name="product_category">
+        <?php 
+        while ($data = mysqli_fetch_array($query)){
+         $category_id = $data['category_id'];
+         $category_name = $data['category_name'];
+         echo    "<option value='$category_id'>$category_name</option>";
+        }
+        ?>
+     
+
+
+      </select>
+      <br><br>
+      Product code:<br>
       <input type="text" name="product_code"><br><br>
 
        Product Entry Date :<br>

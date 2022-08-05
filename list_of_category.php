@@ -30,7 +30,7 @@ require('connection.php');
   echo "<tr>
             <td>$category_name</td>
             <td>$category_entrydate</td>
-            <td><a href='edit_category.php?id=$category_id'>Edit</a></td>
+            <td><a href='edit_category.php?id=$category_id'>Edit</a></td> 
   </tr>";
   }
   
