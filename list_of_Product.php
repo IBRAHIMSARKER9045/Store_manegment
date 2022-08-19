@@ -1,17 +1,18 @@
-
+  
 <?php
 require('connection.php');
-$sql1   = "SELECT * FROM category";
+$sql1   = "SELECT * FROM product";
 $query1 = $conn->query($sql1);
 $data_list =array();
- 
+
 
 while($data1  = mysqli_fetch_assoc($query1)){
-$category_id  = $data1['$category_id'];
-$category_name  = $data1['$category_name'];
-$data_list['category_id'] =$category_name ;
+$category_id = $data['category_id'];
+$category_name = $data['category_name'];
+$data_list =$category_name ;
 
 }
+ 
 
 ?>
  

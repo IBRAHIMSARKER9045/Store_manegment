@@ -14,7 +14,7 @@ require('connection.php');
  <body>
   <?php 
   $sql = "SELECT* FROM category";
-  $query = $conn->query($sql);
+  $query = $conn->query($sql);  
   echo "<table border='1'>
   <tr>
   <th>Category</th>
